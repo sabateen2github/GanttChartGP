@@ -38,7 +38,7 @@ class App extends Component {
      return (
         <div>
       <Chart
-        width={'100vw'}
+        width={'100%'}
         height={'100vh'}
         chartType="Gantt"
         loader={<div>Loading Chart</div>}
@@ -64,6 +64,11 @@ class App extends Component {
           ['10', 'Preparing a presentation', null, null, 7 * 86400000, 100, '9'],
           ['11', 'Presentation + Demo Day', null, null, 1 * 86400000, 100, '10'],
         ]}
+		options={{
+			gantt: {
+				labelMaxWidth: 400,
+			}
+		}}
         rootProps={{ 'data-testid': '1' }}
       />
         </div>
